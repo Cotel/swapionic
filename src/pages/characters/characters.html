@@ -1,0 +1,23 @@
+<!--
+  Generated template for the Characters page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Characters</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item detail-none *ngFor="let character of characters" (click)="characterSelected(character)">
+      <h2>{{ character.name }}</h2>
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>

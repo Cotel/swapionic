@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{planet.name}}'s details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{planet.name}}
+    </ion-card-header>
+    <ion-list>
+      <button ion-item detail-none>
+        <ion-icon name="people" item-left></ion-icon>
+        <h3>Population: {{planet.population}}</h3>
+      </button>
+    </ion-list>
+  </ion-card>
+</ion-content>

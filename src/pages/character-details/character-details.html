@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{character.name}}'s details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{character.name}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+
+        <button ion-item detail-none>
+          <ion-icon [name]="getCharacterSexIcon()" item-left></ion-icon>
+          <h3>{{(character.gender === 'n/a') ? 'Robot' : character.gender.charAt(0).toUpperCase() + character.gender.slice(1)}}</h3>
+        </button>
+
+        <button ion-item detail-none>
+          <ion-icon name="man" item-left></ion-icon>
+          <h3>Height: {{character.height/100}} m</h3>
+        </button>
+
+        <button ion-item detail-none>
+          <ion-icon name="speedometer" item-left></ion-icon>
+          <h3>Weight: {{character.weight}} kg</h3>
+        </button>
+
+        <button ion-item detail-none>
+          <ion-icon name="star" item-left></ion-icon>
+          <h3>Birth Year: {{character.birth_year}}</h3>
+        </button>
+
+        <button ion-item detail-none (click)="planetSelected(characterHomeworld)">
+          <ion-icon name="planet" item-left></ion-icon>
+          <h3>Homeworld: {{characterHomeworld.name}}</h3>
+          <ion-icon name="arrow-forward" item-right></ion-icon>
+        </button>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
